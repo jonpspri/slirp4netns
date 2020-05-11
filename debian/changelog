@@ -1,0 +1,64 @@
+slirp4netns (0.4.3-2~ppa1) unstable; urgency=medium
+
+  * "Backport" attempt for bionic
+
+ -- Jonathan Springer <jonpspri@gmail.com>  Mon, 11 May 2020 11:07:59 -0400
+
+slirp4netns (0.4.3-1) unstable; urgency=medium
+
+  * New upstream version 0.4.2
+    - sandbox fixes
+  * New upstream version 0.4.3
+    - api: raise an error if the socket path is too long (#158)
+    - libslirp: update to 4.1.0
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 16 Feb 2020 08:23:59 -0500
+
+slirp4netns (0.4.1-1) unstable; urgency=medium
+
+  * New upstream version 0.4.1
+    - Support specifying netns path (slirp4netns --netns-type=path PATH TAPNAME)
+    - Support specifying --userns-path
+    - Vendor https://gitlab.freedesktop.org/slirp/libslirp (QEMU v4.1+)
+    - Bring up loopback device when --configure is specified
+    - Support sandboxing by creating a mount namespace (--enable-sandbox)
+    - libslirp: Fix heap overflow (Fixes: CVE-2019-14378)
+    - Support seccomp (--enable-seccomp)
+    - libslirp: Fix use-after-free (Fixes CVE-2019-15890, Closes: #939868)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Fri, 20 Sep 2019 07:58:27 -0400
+
+slirp4netns (0.3.2-1) unstable; urgency=medium
+
+  * New Upstream release:
+   - vendor freedresktop slirp (upstream pull/130)
+  * Bug fix: "CVE-2019-14378: heap buffer overflow during packet
+    reassembly", thanks to Salvatore Bonaccorso (Closes: #933742).
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 14 Aug 2019 07:33:02 -0400
+
+slirp4netns (0.3.1-1) unstable; urgency=medium
+
+  * New Upstream release:
+    - ip_icmp.c: fix use-after-free (release v0.3.1)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 31 Jul 2019 08:14:53 -0400
+
+slirp4netns (0.3.0-1) experimental; urgency=medium
+
+  * new upstream release
+    - slirp: check sscanf result when emulating ident (CVE-2019-9824)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sat, 30 Mar 2019 11:02:30 -0400
+
+slirp4netns (0.2.1-1) unstable; urgency=medium
+
+  * New upstream release (Fixes: CVE-2019-6778)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Sun, 27 Jan 2019 10:43:49 -0500
+
+slirp4netns (0.1~git20181119.5e4789b-1) unstable; urgency=medium
+
+  * Initial release (Closes: #917337)
+
+ -- Reinhard Tartler <siretart@tauware.de>  Wed, 26 Dec 2018 09:52:59 -0500

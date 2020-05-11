@@ -1,0 +1,20 @@
+Source: slirp4netns
+Section: misc
+Priority: optional
+Maintainer: Reinhard Tartler <siretart@tauware.de>
+Build-Depends: debhelper (>= 9), autotools-dev, dh-autoreconf, automake, autoconf, libglib2.0-dev, libcap-dev, libseccomp-dev
+Standards-Version: 4.3.0
+Homepage: https://github.com/rootless-containers/slirp4netns
+Vcs-Browser: https://salsa.debian.org/debian/slirp4netns
+Vcs-Git: https://salsa.debian.org/debian/slirp4netns.git
+
+Package: slirp4netns
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: User-mode networking for unprivileged network namespaces
+ slirp4netns provides user-mode networking for unprivileged network
+ namespaces.
+ .
+ slirp4netns allows connecting a network namespace to the Internet in a
+ completely unprivileged way, by connecting a TAP device in a network
+ namespace to the usermode TCP/IP stack ("slirp").

@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_auto_test:
+	if unshare -r /bin/true 2>/dev/null; then dh_auto_test; else \
+	echo "WARNING: Skipping test suite, user namespaces not available"; fi
